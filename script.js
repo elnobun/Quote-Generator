@@ -45,7 +45,8 @@ const getQuoteFromAPI = async () => {
     removeLoadingSpinner();
   } catch (e) {
     // get a new quote if you hit an error
-    console.log("Sorry, no quote", e);
+    throw new Error(e);
+    // console.log("Sorry, no quote", e);
   }
 };
 
